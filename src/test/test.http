@@ -1,0 +1,29 @@
+POST http://localhost:8080/data_refill_center/payForDataRefill
+Content-Type: application/json
+
+{
+  "userAccountId": 1,
+  "businessAccountId": 2,
+  "businessName": "中国移动",
+  "payAmount": 100,
+  "phoneNumber": "18768126738",
+  "dataPackage": {
+    "data": 1024,
+    "id": 1,
+    "price": 200,
+    "type": 2,
+    "couponActivity": {
+      "id": 1,
+      "dataPackageId": 1,
+      "couponAmount": 5,
+      "status": 2,
+      "startTime": "2022-02-27 00:00:00",
+      "endTime": "2022-03-05 00:00:00"
+    }
+  },
+  "coupon": {
+    "id": 1,
+    "userAccountId": 1,
+    "couponAmount": 2
+  }
+}

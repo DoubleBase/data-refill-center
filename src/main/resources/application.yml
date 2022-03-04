@@ -1,0 +1,68 @@
+activity:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_activity?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+coupon:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_coupon?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+credit:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_credit?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+finance:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_finance?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+lottery:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_lottery?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+
+order:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_order?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+dataPackage:
+  datasource:
+    type: com.alibaba.durid.pool.xa.DruidXADataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/data_refill_center_package?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+spring:
+  jta:
+    log-dir: classpath:tx_logs
+    transaction-manager-id: txManager
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+logging:
+  level:
+    root:
+      debug
+
+
