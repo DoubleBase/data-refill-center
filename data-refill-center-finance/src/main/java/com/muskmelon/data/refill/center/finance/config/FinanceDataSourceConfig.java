@@ -5,6 +5,7 @@ import com.alibaba.druid.pool.xa.DruidXADataSource;
 import com.atomikos.jdbc.AtomikosDataSourceBean;
 import lombok.Getter;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.bytesoft.bytejta.supports.jdbc.LocalXADataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -43,7 +44,9 @@ public class FinanceDataSourceConfig {
         dataSource.setPassword(password);
         dataSource.setDriverClassName(driverName);
 
-        return dataSource;
+        LocalXADataSource localXADataSource = new LocalXADataSource();
+        localXADataSource.setDataSource(dataSource);
+        return localXADataSource;
     }
 
     @Bean(name = "financeTransactionManager")

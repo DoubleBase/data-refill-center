@@ -15,5 +15,4 @@ public interface AccountAmountApi {
     void transfer(@RequestParam Long fromUserAccountId,
                   @RequestParam Long toUserAccountId,
                   @RequestParam Long accountAmount);
-
 }
