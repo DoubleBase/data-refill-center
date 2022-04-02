@@ -101,6 +101,22 @@
 					<groupId>org.springframework.cloud</groupId>
 					<artifactId>spring-cloud-consul-discovery</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+					<groupId>org.springframework.cloud</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>ribbon-loadbalancer</artifactId>
+					<groupId>com.netflix.ribbon</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jsr305</artifactId>
+					<groupId>com.google.code.findbugs</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>ribbon-core</artifactId>
+					<groupId>com.netflix.ribbon</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>

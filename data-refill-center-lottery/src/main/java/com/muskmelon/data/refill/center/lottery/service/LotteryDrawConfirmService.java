@@ -4,6 +4,7 @@ import com.muskmelon.data.refill.center.lottery.api.LotteryDrawApi;
 import com.muskmelon.data.refill.center.lottery.mapper.LotteryDrawMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @Service("lotteryDrawConfirmService")
-@RestController("/lotteryDraw/confirm")
+@RequestMapping("/lotteryDraw/cancel")
 public class LotteryDrawConfirmService implements LotteryDrawApi {
 
     @Resource

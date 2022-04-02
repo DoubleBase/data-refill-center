@@ -63,18 +63,21 @@ public class RefillDataCenterServiceImpl implements RefillDataCenterService {
             lotteryDrawService.updateLotteryDrawCount(refillOrder.getUserAccountId());
 
             // 增加积分
-            creditService.updateCreditPoint(refillRequest.getUserAccountId(), refillOrder.getCredit());
+            log.info("增加用户积分，userAccountId={}, credit={}", refillRequest.getUserAccountId(), refillOrder.getCredit());
+//            creditService.updateCreditPoint(refillRequest.getUserAccountId(), refillOrder.getCredit());
 
             // 修改流量券状态
             if (Objects.nonNull(refillRequest.getCoupon()) && Objects.nonNull(refillRequest.getCoupon().getId())) {
-                couponService.markCouponUsed(refillRequest.getCoupon().getId());
+                log.info("修改流量券状态，couponId={}", refillRequest.getCoupon().getId());
+//                couponService.markCouponUsed(refillRequest.getCoupon().getId());
             }
 
             // 赠送流量券
             CouponActivity couponActivity = refillRequest.getDataPackage().getCouponActivity();
             if (Objects.nonNull(couponActivity) && Objects.nonNull(couponActivity.getId())) {
                 Coupon coupon = createCoupon(refillRequest, couponActivity);
-                couponService.insertCoupon(coupon);
+                log.info("赠送流量券，coupon={}", coupon);
+//                couponService.insertCoupon(coupon);
             }
 
             // 完成流量充值
