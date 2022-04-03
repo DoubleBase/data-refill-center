@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: data-refill-center-order
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/reliable-message?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    username: root
+    password: root
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 9010
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
